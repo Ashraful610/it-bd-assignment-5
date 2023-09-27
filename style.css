@@ -41,9 +41,14 @@ nav ul li::after{
 nav ul li:hover::after{
     transform: translate(0);
 }
+.menu-icon{
+    display: none ;
+    font-size: 30px;
+}
 #course-section{
     width: 100%;
-    height:calc(100vh - 60px);
+    min-height: calc(100vh - 60px);
+    max-height:min-content;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.7),rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('./images/img-5.jpg');
     background-size: cover;
     background-position: center;
@@ -61,8 +66,9 @@ nav ul li:hover::after{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-flow: wrap;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 20px 40px;
 }
 .course-content{
     width: 22%;
@@ -98,4 +104,29 @@ nav ul li:hover::after{
 .course-content .content button:hover{
     background-color: white;
     color: black;
+}
+@media  (max-width:1024px) {
+    .menu-icon{
+        display: block ;
+    }
+    nav ul {
+        display: none;
+    }
+    .course-content{
+        width: 30%;
+    }
+}
+@media  (max-width:776px) {
+    .course-content{
+        width: 45%;
+        margin-bottom: 10px;
+    }
+}
+@media (max-width:576px) {
+    nav{
+        padding: 0 30px;
+    }
+    .course-content{
+        width: 100%;
+    }
 }
